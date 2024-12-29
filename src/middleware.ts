@@ -4,7 +4,7 @@ import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest){
     // gets the current path
     const path = request.nextUrl.pathname
-    const isPublicPath = path === '/login' || path === '/signup'
+    const isPublicPath = path === '/login' || path === '/signup' || path === '/verifyemail'
 
     // if the user has token, he shouldn't be able to access the public paths
 
@@ -25,5 +25,6 @@ export const config = {
         '/profile',
         '/login',
         '/signup',
+        '/verifyemail'
     ]
 }
